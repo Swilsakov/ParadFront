@@ -6,6 +6,7 @@ import {
   RevokeRoleForm,
 } from "./module/RoleForms";
 import {
+  CreateDisputeForm,
   SetDisputePointForm,
   SetIsHotDisputeForm,
   SetStatusDisputeForm,
@@ -18,11 +19,16 @@ import {
 } from "./module/ContractForms";
 import { ReceiveERC20Form, WithdrawPARADForm } from "./module/WithdrawForms";
 import styles from "@/styles/components/forms/admin-forms.module.css";
+import { CreateDisputeModalButton } from "@/components/modal/CreateDispute";
 import { CreateDebatesModalButton } from "@/components/modal/CreateDebates";
 
 export default function MasterForm() {
   return (
     <div className={styles.master_form}>
+      <div className={styles.master_form__dispute}>
+        <h2 className={"purple_color"}>Create Dispute Modal</h2>
+        <CreateDisputeModalButton />
+      </div>
       <div className={styles.master_form__dispute}>
         <h2 className={"purple_color"}>Create Dispute Modal</h2>
         <CreateDebatesModalButton />
